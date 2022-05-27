@@ -18,7 +18,7 @@ const initChart = () => {
         title: {},
         tooltip: {
           trigger: 'item',
-          formatter: '{b}<br/>{c} (p / km2)'
+          formatter: '{b}<br/>{c}'
         },
         toolbox: {
           show: true,
@@ -41,14 +41,15 @@ const initChart = () => {
             color: ['lightskyblue', 'yellow', 'orangered']
           }
         },
+     textStyle:{
+       fontSize:25
+     },
         label: {
-          normal: {
-            textStyle: {
-              fontSize: 15,
-              fontWeight: 'bold',
-              color: 'red'
-            }
-          }
+          "formatter":function(params){
+            return  params.name+" "+params.value;
+
+          },
+
         },
         series: [
           {
@@ -110,7 +111,7 @@ const initChart = () => {
 
   <div class="wrapper">
 
-    <div class="mycharts" id="mycharts" ref="mycharts" style="width: 1000px; height: 1000px;"></div>
+    <div class="mycharts" id="mycharts" ref="mycharts" style="width: 2000px; height: 2000px;"></div>
   </div>
 </template>
 
