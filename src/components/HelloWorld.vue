@@ -41,6 +41,8 @@ const initChart = () => {
             color: ['lightskyblue', 'yellow', 'orangered']
           }
         },
+
+
      textStyle:{
        fontSize:25
      },
